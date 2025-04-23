@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cipher Kitchen</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Cipher Kitchen</h1>
+
+    <label for="inputText">Enter Text</label>
+    <textarea id="inputText" rows="4" placeholder="Type your message..."></textarea>
+
+    <label for="cipherSelect">Choose Cipher</label>
+<select id="cipherSelect">
+  <option value="caesar">Caesar Cipher</option>
+  <option value="rot13">ROT13</option>
+  <option value="atbash">Atbash Cipher</option>
+  <option value="vigenere">Vigenère Cipher</option>
+  <option value="morse">Morse Code</option>
+</select>
+
+    <div id="caesarOptions" class="cipher-options">
+        <label for="shiftValue">Shift Value</label>
+        <input type="number" id="shiftValue" value="3" />
+    </div>
+
+    <div id="vigenereOptions" class="cipher-options">
+        <label for="keyValue">Encryption Key</label>
+        <input type="text" id="keyValue" value="KEY" placeholder="Enter a key word..." />
+    </div>
+
+    <button id="translateBtn">Cook</button>
+
+    <div class="output">
+      <h3>Encrypted Output</h3>
+      <p id="outputText"></p>
+    </div>
+  </div>
+
+  <!-- Use type="module" to enable ES modules -->
+  <script type="module" src="script.js"></script>
+</body>
+</html>
